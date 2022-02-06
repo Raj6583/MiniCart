@@ -1,0 +1,46 @@
+//Home customization
+
+//Primary color
+$primary-color: #65297c;
+
+//Secondary color
+$secondary-color: #c095c5;
+
+.mc-banner {
+  display: flex;
+  height: 100%;
+  border-radius: 1em;
+  background: url(../../assets/img/mini-cart-banner.png) no-repeat center center;
+  background-size: cover;
+
+  .mc-title-container {
+    display: flex;
+    position: relative;
+    padding: 150px 0;
+    margin: 0 auto 0 4rem;
+
+    .mc-caption {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 6rem;
+      font-weight: bold;
+      color: $primary-color;
+    }
+  }
+
+  // Mobile/Tablet view
+  @media (min-width: 360px) and (max-width: 1023px) {
+    align-items: center;
+    height: 250px;
+
+    .mc-title-container {
+      margin-left: 1rem;
+      padding: 0;
+
+      .mc-caption {
+        font-size: 2.25rem;
+      }
+    }
+  }
+}

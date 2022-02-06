@@ -1,0 +1,29 @@
+// Products customization
+
+.mc-products {
+  .card {
+    border-radius: 0;
+    border-bottom: none;
+    &:last-child {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .card-body .row {
+      place-items: center;
+    }
+
+    .item-price {
+      font-size: 1.25rem;
+      font-weight: bold;
+      place-self: center;
+      text-align: right;
+    }
+  }
+
+  @media (max-width: 428px) and (orientation: portrait) {
+    .mc-product-container {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+}

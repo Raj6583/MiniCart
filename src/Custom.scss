@@ -1,0 +1,9 @@
+//Customized SCSS
+$theme-colors: (
+  "primary": #65297c,
+  "secondary": #c095c5,
+  "info": tomato,
+  "danger": teal,
+);
+
+@import "~bootstrap/scss/bootstrap";

@@ -1,0 +1,87 @@
+//Header component customization
+
+//Primary color
+$primary-color: #65297c;
+
+//Secondary color
+$secondary-color: #c095c5;
+
+.mc-navbar {
+  background-color: $primary-color;
+  background-image: linear-gradient(
+    to right,
+    $primary-color 65%,
+    $secondary-color
+  );
+  box-shadow: 1px 2px 3px 2px #ccc;
+  height: 64px;
+  margin-bottom: 2em;
+  z-index: 1;
+
+  .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .navbar-brand {
+    margin-right: 2rem;
+  }
+
+  .mc-cart {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .mc-web-app {
+    display: block;
+    visibility: visible;
+  }
+
+  .mc-mobile-app {
+    display: none;
+    visibility: hidden;
+  }
+
+  // Mobile/Tablet view
+  @media (min-width: 360px) and (max-width: 1023px) {
+    // .mc-header-container :nth-child(2) {
+    //   order: 3;
+    // }
+
+    .mc-mobile-app {
+      display: block;
+      visibility: visible;
+    }
+
+    .mc-web-app {
+      display: none;
+      visibility: hidden;
+    }
+
+    #responsive-navbar-nav {
+      background-color: $secondary-color;
+      padding: 2em;
+      border-radius: 0 0 10px 10px;
+
+      a {
+        color: $primary-color;
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
